@@ -1,0 +1,51 @@
+
+.float {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    border: 5px solid green;
+    border-radius: 15px;
+    background-color: rgb(157, 228, 174);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 3vw;
+    font-size: 2vw;
+}
+input{
+    background-color: white;
+    width: 60%;
+    height: 3vw;
+    font-size: 1.5vw;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 0.5vw 1vw;
+}
+
+.float button:not(.underline-btn) {
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 2vw;
+    font-weight: bold;
+    padding: 1vw 3vw;
+    margin: 1vw 0;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: transform 0.1s, box-shadow 0.1s;
+    cursor: pointer;
+}
+.float button:not(.underline-btn):hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+}
+.underline-btn {
+    background: none;
+    border: none;
+    color: white;
+    text-decoration: underline;
+    font-size: 1.5vw;
+    cursor: pointer;
+    padding: 0;
+}
