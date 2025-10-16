@@ -33,7 +33,7 @@ $stmt->close();
 
 // --- Insere alternativas ---
 if (isset($_POST['alternativas']) && is_array($_POST['alternativas'])) {
-    $correta = intval($_POST['correta']); // índice da alternativa correta
+    $correta = intval($_POST['adequada']); // <-- Corrigido aqui!
 
     $sqlAlt = "INSERT INTO alternativas (descricao, adequada, SITUACOES_id) VALUES (?, ?, ?)";
     $stmtAlt = $con->prepare($sqlAlt);

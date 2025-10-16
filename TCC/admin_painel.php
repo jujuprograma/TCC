@@ -52,9 +52,11 @@ include 'conexao.php';
       </thead>
       <tbody id="sortable-situacoes">
         <?php
+        // Garante a ordem correta
         $sql = "SELECT s.*, a.descricao AS alternativa_adequada 
-                FROM situacoes s
-                LEFT JOIN alternativas a ON s.id = a.SITUACOES_id AND a.adequada = 1";
+        FROM situacoes s
+        LEFT JOIN alternativas a ON s.id = a.SITUACOES_id AND a.adequada = 1
+        ORDER BY s.ordem ASC";
         $resultado = mysqli_query($con, $sql);
 
         while ($linha = mysqli_fetch_assoc($resultado)):
@@ -63,7 +65,7 @@ include 'conexao.php';
           $img = str_replace('uploads/', '', $img);
           $caminho = "uploads/$img";
         ?>
-        <tr>
+        <tr data-id="<?= $linha['id'] ?>">
           <td><?= $linha['id'] ?></td>
           <td><?= htmlspecialchars($linha['descricao']) ?></td>
           <td>
@@ -75,17 +77,23 @@ include 'conexao.php';
           </td>
           <td>
             <?php
+            // Mostra todas as alternativas e destaca a correta
             $id_situacao = $linha['id'];
             $sql_alt = "SELECT descricao, adequada FROM alternativas WHERE SITUACOES_id = $id_situacao";
             $res_alt = mysqli_query($con, $sql_alt);
             while ($alt = mysqli_fetch_assoc($res_alt)):
               $texto = htmlspecialchars($alt['descricao']);
-              $marcada = $alt['adequada'] == 1 ? "<strong>(✔)</strong>" : "";
-              echo "<div>$texto $marcada</div>";
+              if ($alt['adequada'] == 1) {
+                echo "<div style='color:#27ae60;font-weight:bold;'>$texto (✔)</div>";
+              } else {
+                echo "<div>$texto</div>";
+              }
             endwhile;
             ?>
           </td>
-          <td><?= htmlspecialchars($linha['alternativa_adequada'] ?? '—') ?></td>
+          <td style="color:#27ae60;font-weight:bold;">
+            <?= htmlspecialchars($linha['alternativa_adequada'] ?? '—') ?>
+          </td>
           <td><?= $linha['ordem'] ?></td>
           <td><?= $linha['nivel'] ?></td>
           <td>
@@ -104,7 +112,7 @@ new Sortable(document.getElementById('sortable-situacoes'), {
   animation: 150,
   onEnd: function () {
     const ordem = [...document.querySelectorAll('#sortable-situacoes tr')].map((row, index) => ({
-      id: parseInt(row.querySelector('td').innerText),
+      id: parseInt(row.dataset.id),
       ordem: index + 1
     }));
 
@@ -112,6 +120,16 @@ new Sortable(document.getElementById('sortable-situacoes'), {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(ordem)
+    })
+    .then(r => r.json())
+    .then(res => {
+      if (res.sucesso) {
+        const aviso = document.createElement('div');
+        aviso.textContent = 'Ordem atualizada!';
+        aviso.style.cssText = 'position:fixed;top:10px;right:10px;background:#d4edda;color:#155724;padding:10px;border-radius:8px;z-index:9999;';
+        document.body.appendChild(aviso);
+        setTimeout(() => aviso.remove(), 1800);
+      }
     });
   }
 });
