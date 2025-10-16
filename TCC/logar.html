@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LOGIN</title>
-    <link rel="stylesheet" href="logar.css">
     <!--janelinha de erro-->
      <script>
       window.onload = function() {
@@ -28,5 +27,70 @@
             </form>
         </div>
     </div>
+
+    <style>
+          body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+    font-weight: bold;
+    background-image: url('img/backgroun.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blocão {
+  width: 900px;
+  padding: 140px;
+  background-color: #fba10b;
+  border: 8px solid #8b1620;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.email, 
+.senha {
+        border-radius: 40px;
+        background-color: white;
+        border: 4px solid #8b1620;
+        padding: 10px;
+        width: 800px;
+        font-size: 30px;
+        font-family: cursive;
+}
+.botao {
+   border-radius: 40px;
+   background-color: #8b1620;
+   color: white;
+   width: 120px;
+   padding: 10px;
+   font-size: 30px;
+   font-family: cursive;   
+   margin: 30px auto 0 auto; /* centraliza horizontalmente */
+   display: block;   
+}
+.botao a {
+  text-decoration: none;
+  color: white; /* Garante que o texto fique branco */
+}
+.titulo {
+  font-size: 60px;
+  font-family: cursive;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 40px;
+  color: white;
+   -webkit-text-stroke: 3px #8b1620;
+}
+    </style>
 </body>
 </html>
