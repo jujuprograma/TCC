@@ -1,0 +1,156 @@
+body{
+    font-family: cursive;
+    color: #7b0f20;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.logo {
+  position: fixed;
+  margin-left: 100px; /* Adiciona um espaço à direita da imagem */ 
+}
+
+.menu-principal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; /* Corrigido */
+    background-color: #ffa60d;
+    padding: 20px;
+    box-sizing: border-box; /* Inclui padding/borda na largura */
+    border-bottom: 3px solid #7b0f20; /* Exemplo de borda */
+}
+
+.menu-principal ul {
+    list-style: none;
+    /* Remove os marcadores de lista */
+    display: flex;
+    /* Coloca os itens na mesma linha */
+    justify-content: center;
+    /* Centraliza os itens do menu */
+    color: #ffffff;
+}
+
+.menu-principal li {
+    text-decoration-color: #7b0f20;
+    text-decoration-thickness: 1px;
+    margin: 0 30px;
+    /* Espaçamento entre os itens do menu */
+}
+
+.menu-principal a {
+    font-family: cursive;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 25px;
+    transition: transform 0.3s ease;
+}
+
+.menu-principal .sobre:hover { color: #7b0f20;}
+.menu-principal .quem:hover {color: #3aa176;}
+.menu-principal .conte:hover {color: #0764a7;}
+.menu-principal .acessar:hover {color: #bd3017;}
+
+.nometexto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+}
+
+.play {
+    height: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.play img {
+    transition: transform 0.3s ease;
+}
+
+.play img:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+.main-content {
+    z-index: 1;
+    text-align: justify;
+    margin: 30px;
+}
+
+.main-content h2 {
+    color:#FFA500;
+    font-size: 36px;
+}
+
+.creators,
+.feedback {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.creator-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+        .feedback-area {
+            background-color: #FFA07A;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .feedback-area textarea {
+            width: 100%;
+            height: 60px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .feedback-list {
+            margin-top: 20px;
+        }
+
+        .feedback-list div {
+            background-color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFA500;
+    padding: 20px 40px;
+    position: relative;
+    width: 100%; /* Corrigido */
+    font-size: 12px;
+    box-sizing: border-box;
+    border-top: 3px solid #7b0f20; /* Exemplo de borda */
+}
+
+.logorodape img {
+    height: 80px; /* Ajuste conforme necessário */
+}
+
+.Instagram img {
+    height: 80px; /* Ajuste conforme necessário */
+    transition: transform 0.3s ease;
+}
+.Instagram img:hover{
+    transform: scale(1.1);
+
+}

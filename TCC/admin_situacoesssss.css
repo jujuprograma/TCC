@@ -1,0 +1,248 @@
+/* ===  Fonte === */
+body {
+  margin: 0;
+  font-family: cursive;
+}
+
+/* === Container Principal === */
+.container {
+  display: flex;
+  height: calc(200vh - 60px);
+}
+
+/* === Título === */
+.tituloADDSituacao {
+  margin-left: 80px;
+  margin-top: 10px;
+}
+
+/* === Subtitulos e Inputs === */
+label {
+  font-weight: bold;
+  margin-top: 30px;
+  margin-left: 90px;
+  display: block;
+  color: #80142d;
+}
+
+textarea,
+input[type="text"] {
+  width: 80%;
+  padding: 10px;
+  border: 2px solid #80142d;
+  border-radius: 8px;
+  margin-top: 5px;
+  margin-left: 90px;
+  font-size: 14px;
+}
+
+/* === Upload === */
+.upload {
+  border: 2px solid #80142d;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  color: #80142d;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+
+}
+.upload:hover{
+  transform: scale(1.1);
+
+}
+
+/* === Alternativas === */
+#alternativas div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-left: 90px;
+  margin-top: 10px;
+}
+
+#alternativas input[type="text"] {
+  flex: 1;
+  margin-left: 0;
+}
+
+/* === Botão Correção === */
+.botao-correcao {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #3aa176;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao-correcao:checked {
+  background-color: #3aa176;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);
+  transition: transform 0.3s ease;
+}
+.botao-correcao:hover{
+  background-color: #3aa176;
+  box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.3);  
+  transform: scale(1.1);
+}
+
+#ordem{
+  border: 2px solid #80142d;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 10px;
+  margin-top: 10px;
+  margin-left: 90px;
+  cursor: pointer;
+  color: #80142d;
+  font-weight: bold;
+}
+#nivel{
+  border: 2px solid #80142d;
+  border-radius: 8px;
+  display: inline-block;
+  padding: 10px 15px;
+  margin-top: 10px;
+  margin-left: 90px;
+  cursor: pointer;
+  color: #80142d;
+  font-weight: bold;
+}
+
+
+/* === Botão Salvar === */
+.btn-salvar {
+  display: block;
+  margin-top: 20px;
+  margin-left: 90px;
+  background: #80142d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.btn-salvar:hover {
+  background: #a91f40;
+  transform: scale(1.1);
+}
+
+/* === Cabeçalho === */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 110px;
+  background: #f59c00;
+  color: white;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  border-bottom: 3px solid #7b0f20;
+  z-index: 11;
+}
+
+header .perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+}
+
+header .perfil i {
+  font-size: 50px;
+}
+
+
+/* === Tabela === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table th,
+table td {
+  border: 2px solid #80142d;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f69e00;
+  color: white;
+}
+
+table td img {
+  border-radius: 6px;
+}
+
+
+
+
+
+
+/*-----------------------------------------------------*/
+/* === Sidebar === */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #7b0f16;
+  color: white;
+  padding: 130px 20px 20px;
+  box-sizing: border-box;
+  z-index: 10;
+}
+
+.sidebar h3 {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #a81a23;
+  padding: 8px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #b82d36;
+}
+
+/* === Conteúdo === */
+.content {
+  margin-left: 240px;
+  padding-top: 130px;
+  box-sizing: border-box;
+}

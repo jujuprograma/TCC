@@ -1,0 +1,92 @@
+body {
+    margin: 0;
+    font-family: cursive;
+
+}
+.bg-right-img {
+    position: fixed;
+    right: 130px;
+    top: 140px;
+    height: 80vh;      /* Ocupa toda a altura da tela */
+    z-index: -1;        /* Fica atrás do conteúdo */
+    pointer-events: none; /* Não interfere nos cliques */
+}
+/* Cabeçalho */
+header {
+  position: fixed;    /* Fixa no topo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #f59c00;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box; /* Inclui padding/borda na largura */
+  border-bottom: 3px solid #7b0f20; /* Exemplo de borda */
+  z-index: 11;        /* Garante que fique acima da sidebar e do conteúdo */
+}
+
+header .perfil {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 25px;
+}
+
+header .perfil i {
+  font-size: 50px;
+}
+
+/* Container principal */
+.container {
+  display: flex;
+  height: calc(200vh - 60px);
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #7b0f16;
+  color: white;
+  padding: 130px 20px 20px 20px; /* 130px no topo para dar espaço para o header e a logo */
+  box-sizing: border-box;
+  z-index: 10; /* Fica acima do conteúdo, mas abaixo do header */
+}
+
+.sidebar h3 {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #a81a23;
+  padding: 8px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.sidebar ul li a:hover {
+  background: #b82d36;
+}

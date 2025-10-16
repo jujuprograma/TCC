@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consciência em Jogo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<a href="index.html" class="home-icone">
+  <i class="fas fa-home"></i>
+</a>
+
+<div class="topo-jogo">
+    <img src="img/LogoBranca.png" alt="Consciência em Jogo" class="logo">
+    <a href="#"><h1>Começar Jogo</h1></a>
+    <a href="#"><h1>Galeria de Personagens</h1></a>
+    <a href="recursos.html"><h1>Recursos Educativos</h1></a>
+    <a href="creditos.html"><h1>Créditos</h1></a>
+</div>
+
+<style>
+  body {
+    background-image: url('img/BackgroundJogo.jpg'); /* Substitua pelo caminho da sua imagem */
+    background-size: cover; /* Faz a imagem cobrir toda a área */
+    background-repeat: no-repeat; /* Impede a imagem de se repetir */
+    background-attachment: fixed; /* Mantém a imagem fixa ao rolar */
+    min-height: 100vh; /* Garante que a imagem ocupe toda a altura da tela */
+}
+
+.home-icone {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 200;
+  color: #fff;
+  font-size: 40px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.home-icone:hover {
+    transform: scale(1.1);
+}
+
+.topo-jogo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    z-index: 101;
+}
+
+.logo {
+    width: 600px; /* ou 400px */
+    height: auto;
+    margin-bottom: 100px;
+    position: static;
+    border: none; /* remova a borda depois do teste */
+}
+
+.topo-jogo h1 {
+    color: #fff;
+    font-family: cursive;
+    font-weight: bold;
+    text-align: right;
+    margin: 0 0 10px 0;
+    font-size: 40px; /* ajuste conforme necessário */
+    transition: 0.3s;
+}
+
+.topo-jogo h1:hover {
+    transform: scale(1.1);
+    color: #fea613;}
+a {
+    text-decoration: none;
+}
+</style>
+</html>

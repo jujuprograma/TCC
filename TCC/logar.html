@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <link rel="stylesheet" href="logar.css">
+    <!--janelinha de erro-->
+     <script>
+      window.onload = function() {
+        const params = new URLSearchParams(window.location.search);
+        if(params.get('erro') === '1') {
+          alert('Seu email ou sua senha estão errados!');
+        }
+      }
+    </script>
+</head>
+<body>
+    <div class="blocão">
+        <p class="titulo">Entrar como ADM</p>
+        <div class="conteiner">
+            <form action="salvar.php" method="POST">
+                <input type="email" name="email" id="email" class="email" placeholder="Email:" required>
+                <br><br>
+                <input type="password" name="senha" id="senha" class="senha" placeholder="Senha:" required>
+                <br>
+                <button type="submit" class="botao">Entrar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
