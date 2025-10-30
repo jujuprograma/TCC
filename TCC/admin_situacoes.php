@@ -30,9 +30,11 @@
       <ul>
         <li><a href="admin_situacoes.php"><i class="fa-solid fa-plus"></i> Nova Fase</a></li>
         <li><a href="admin_painel.php"><i class="fas fa-pencil"></i> Painel de Jogo</a></li>
+        <li><a href="admin_recursos.php"><i class="fa-solid fa-plus"></i> Recursos Educativos</a></li>
+        <li><a href="admin_recursos_painel.php"><i class="fas fa-pencil"></i> Painel da Educação</a></li>
       </ul>
       <ul>
-      <br><br><br><br><br><br><br><br><br><br>
+      <br><br><br><br>
       <li class="sair"><a href="index.html"><i class="fas fa-right-from-bracket"></i> Sair</a></li>
       </ul>
       </aside>
@@ -299,34 +301,6 @@ header .perfil {
 header .perfil i {
   font-size: 50px;
 }
-
-
-/* === Tabela === */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-
-table th,
-table td {
-  border: 2px solid #80142d;
-  padding: 10px;
-  text-align: left;
-}
-
-table th {
-  background-color: #f69e00;
-  color: white;
-}
-
-table td img {
-  border-radius: 6px;
-}
-
-
-
-
 
 
 /*-----------------------------------------------------*/

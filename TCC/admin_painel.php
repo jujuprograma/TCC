@@ -19,22 +19,27 @@ include 'conexao.php';
     </div>
   </header>
 
-<div class="container">
-  <aside class="sidebar">
-    <h3>Menu</h3>
-    <ul>
-      <li><a href="admin.html"><i class="fa-solid fa-house"></i> Página inicial</a></li>
-    </ul>
-    <h3>Edite aqui!</h3>
-    <ul>
-      <li><a href="admin_situacoes.php"><i class="fa-solid fa-plus"></i> Nova Fase</a></li>
-      <li><a href="admin_painel.php"><i class="fas fa-pencil"></i> Painel de Jogo</a></li>
-    </ul>
-    <ul>
-    <br><br><br><br><br><br><br><br><br><br>
-    <li class="sair"><a href="index.html"><i class="fas fa-right-from-bracket"></i> Sair</a></li>
-    </ul>
-  </aside>
+  <div class="container">
+
+    <!-- Menu lateral -->
+    <aside class="sidebar">
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="admin.html"><i class="fa-solid fa-house"></i> Página inicial</a></li>
+      </ul>
+
+      <h3>Edite aqui!</h3>
+      <ul>
+        <li><a href="admin_situacoes.php"><i class="fa-solid fa-plus"></i> Nova Fase</a></li>
+        <li><a href="admin_painel.php"><i class="fas fa-pencil"></i> Painel de Jogo</a></li>
+        <li><a href="admin_recursos.php"><i class="fa-solid fa-plus"></i> Recursos Educativos</a></li>
+        <li><a href="admin_recursos_painel.php"><i class="fas fa-pencil"></i> Painel da Educação</a></li>
+      </ul>
+      <ul>
+      <br><br><br><br>
+      <li class="sair"><a href="index.html"><i class="fas fa-right-from-bracket"></i> Sair</a></li>
+      </ul>
+      </aside>
 
   <main class="tabela">
     <table>

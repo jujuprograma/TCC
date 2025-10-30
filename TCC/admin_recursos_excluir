@@ -1,0 +1,22 @@
+<?php
+include 'conexao.php';
+
+$id = $_GET['id'] ?? null;
+
+if (!$id) {
+    echo "ID inválido.";
+    exit;
+}
+
+$sql = "DELETE FROM GLOSSARIO WHERE id = ?";
+$stmt = $con->prepare($sql);
+$stmt->bind_param("i", $id);
+
+if ($stmt->execute()) {
+    header("Location: admin_painel_recursos.php?sucesso=1");
+} else {
+    echo "Erro ao excluir: " . $stmt->error;
+}
+
+$stmt->close();
+$con->close();
